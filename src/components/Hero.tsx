@@ -108,13 +108,13 @@ export default function Hero() {
             </Button>
           </motion.div>
 
-          <motion.ul variants={item} className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <motion.ul variants={item} className="mt-8 grid grid-cols-3 gap-2 sm:mt-9 sm:gap-4">
             {trust.map(({ icon: Icon, label, sub }) => (
-              <li key={label} className="flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-card">
-                  {Icon ? <Icon className="h-5 w-5" aria-hidden="true" /> : <ToothIcon className="h-6 w-6" strokeWidth={4} />}
+              <li key={label} className="flex flex-col items-center gap-2 text-center sm:flex-row sm:items-center sm:gap-3 sm:text-left">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-card sm:h-10 sm:w-10">
+                  {Icon ? <Icon className="h-4.5 w-4.5 sm:h-5 sm:w-5" aria-hidden="true" /> : <ToothIcon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={4} />}
                 </span>
-                <span className="text-xs leading-snug font-semibold text-ink">
+                <span className="text-[10px] leading-snug font-semibold text-ink sm:text-xs">
                   {label}
                   <br />
                   {sub}
