@@ -11,21 +11,17 @@ export default function Logo({ light = false, href = '#home' }: LogoProps) {
   return (
     <a
       href={href}
-      className="flex min-w-0 shrink items-center gap-2 sm:gap-2.5"
+      className="flex min-w-0 shrink items-center gap-1 sm:gap-1.5"
       aria-label={`${clinic.fullName} home`}
     >
-      <ToothIcon className={`h-8 w-8 shrink-0 sm:h-9 sm:w-9 ${light ? 'text-mint' : 'text-primary'}`} />
-      <span className="flex min-w-0 flex-col leading-none">
-        <span
-          className={`whitespace-nowrap text-[15px] font-extrabold tracking-tight sm:text-xl ${
-            light ? 'text-white' : 'text-ink'
-          }`}
-        >
-          {clinic.name}
-        </span>
-        <span className={`mt-1 text-[10px] font-medium sm:text-[11px] ${light ? 'text-mint/80' : 'text-muted'}`}>
-          {clinic.subtitle}
-        </span>
+      <ToothIcon
+        className={`h-12 w-12 shrink-0 sm:h-14 sm:w-14 ${light ? 'text-mint' : 'text-primary'}`}
+        strokeWidth={3}
+      />
+      <span className="whitespace-nowrap text-xl font-extrabold tracking-tight sm:text-2xl">
+        <span className={light ? 'text-white' : 'text-primary-dark'}>{clinic.logo.first}</span>
+        {' '}
+        <span className={light ? 'text-mint' : 'text-primary'}>{clinic.logo.second}</span>
       </span>
     </a>
   )

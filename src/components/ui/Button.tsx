@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import type { ReactNode } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
+import { scrollToHash } from '../../lib/scroll'
 
 type Variant = 'primary' | 'outline' | 'light'
 
@@ -31,10 +32,18 @@ export default function Button({
   className = '',
   onClick,
 }: ButtonProps) {
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    if (!external && href.startsWith('#')) {
+      e.preventDefault()
+      scrollToHash(href)
+    }
+    onClick?.()
+  }
+
   return (
     <motion.a
       href={href}
-      onClick={onClick}
+      onClick={handleClick}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       whileHover={{ y: -2 }}

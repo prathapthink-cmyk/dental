@@ -3,12 +3,17 @@
  * All sample values below should be replaced with the real clinic details.
  */
 export const clinic = {
-  name: 'Nagercoil Dental',
-  subtitle: 'Clinic',
-  fullName: 'Nagercoil Dental',
+  /** Displayed in the logo (first word = dark green, second = primary green). */
+  name: 'Dental Clinic',
+  logo: {
+    first: 'Dental',
+    second: 'Clinic',
+  },
+  subtitle: '',
+  fullName: 'Dental Clinic',
   tagline: 'Healthy Smile, Happier You',
   description:
-    'Nagercoil Dental offers complete family dental care - cleaning, fillings, root canals, implants, braces and teeth whitening - with modern technology and a gentle approach.',
+    'Dental Clinic offers complete family dental care - cleaning, fillings, root canals, implants, braces and teeth whitening - with modern technology and a gentle approach.',
   /** Production URL (used for canonical, Open Graph and structured data). */
   siteUrl: 'https://nagercoil-dental.pages.dev',
   phone: {
@@ -18,7 +23,7 @@ export const clinic = {
   },
   /** WhatsApp number: country code + number, digits only, no "+" sign. */
   whatsappNumber: '919994850450',
-  whatsappGreeting: 'Hello Nagercoil Dental, I would like to book an appointment.',
+  whatsappGreeting: 'Hello Dental Clinic, I would like to book an appointment.',
   email: 'hello@nagercoildental.example',
   address: {
     street: '24, Green Park Road, Anna Nagar',

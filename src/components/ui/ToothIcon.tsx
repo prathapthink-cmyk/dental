@@ -5,11 +5,11 @@ interface ToothIconProps {
   strokeWidth?: number
 }
 
-/** Brand tooth glyph (Lucide has no tooth icon), drawn to match the favicon. */
+/** Brand tooth glyph (Lucide has no tooth icon), cropped tight to reduce logo gap. */
 export default function ToothIcon({ className, fill = 'none', strokeWidth = 3.5 }: ToothIconProps) {
   return (
     <svg
-      viewBox="0 0 64 64"
+      viewBox="16 10 32 48"
       fill="none"
       className={className}
       aria-hidden="true"

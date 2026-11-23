@@ -28,7 +28,7 @@ export default function AppointmentCTA() {
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <Button
-                href="#contact"
+                href="#name"
                 variant="light"
                 className="w-full sm:w-auto"
                 icon={<CalendarDays className="h-4 w-4" aria-hidden="true" />}

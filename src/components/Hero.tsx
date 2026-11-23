@@ -32,7 +32,7 @@ export default function Hero() {
       <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-mint/60 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-full w-1/2 rounded-bl-[12rem] bg-mint/50 max-lg:hidden" />
 
-      <div className="container-page relative grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-2 lg:gap-6 lg:py-20">
+      <div className="container-page relative grid items-center gap-6 py-8 pb-6 sm:gap-8 sm:py-12 sm:pb-10 lg:grid-cols-2 lg:gap-6 lg:py-16">
         {/* Image first on mobile; on desktop it sits on the right via lg:order-2 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 20 }}
@@ -91,7 +91,7 @@ export default function Hero() {
 
           <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
-              href="#contact"
+              href="#name"
               className="w-full sm:w-auto"
               trailingIcon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}
             >
@@ -108,7 +108,7 @@ export default function Hero() {
             </Button>
           </motion.div>
 
-          <motion.ul variants={item} className="mt-8 grid grid-cols-3 gap-2 sm:mt-9 sm:gap-4">
+          <motion.ul variants={item} className="mt-6 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
             {trust.map(({ icon: Icon, label, sub }) => (
               <li key={label} className="flex flex-col items-center gap-2 text-center sm:flex-row sm:items-center sm:gap-3 sm:text-left">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-card sm:h-10 sm:w-10">

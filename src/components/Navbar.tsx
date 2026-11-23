@@ -78,7 +78,7 @@ export default function Navbar() {
           : 'border-b border-transparent bg-white/70 backdrop-blur-sm'
       }`}
     >
-      <div className="container-page flex h-[72px] items-center justify-between gap-6">
+      <div className="container-page flex h-20 items-center justify-between gap-3 sm:gap-6">
         <Logo />
 
         <nav aria-label="Primary" className="hidden lg:block">
@@ -116,7 +116,7 @@ export default function Navbar() {
             <Phone className="h-4 w-4" aria-hidden="true" />
             {clinic.phone.display}
           </a>
-          <Button href="#contact" icon={<CalendarDays className="h-4 w-4" aria-hidden="true" />}>
+          <Button href="#name" icon={<CalendarDays className="h-4 w-4" aria-hidden="true" />}>
             Book Appointment
           </Button>
         </div>
@@ -125,7 +125,7 @@ export default function Navbar() {
           <a
             href="#contact"
             className="btn-primary shrink-0 px-3 py-2.5 text-xs sm:px-4 sm:text-sm"
-            onClick={(e) => goTo(e, '#contact')}
+            onClick={(e) => goTo(e, '#name')}
           >
             <CalendarDays className="h-4 w-4" aria-hidden="true" />
             Book Now
@@ -180,7 +180,7 @@ export default function Navbar() {
                   <Phone className="h-4 w-4" aria-hidden="true" />
                   {clinic.phone.display}
                 </a>
-                <a href="#contact" className="btn-primary w-full" onClick={(e) => goTo(e, '#contact')}>
+                <a href="#name" className="btn-primary w-full" onClick={(e) => goTo(e, '#name')}>
                   <CalendarDays className="h-4 w-4" aria-hidden="true" />
                   Book Appointment
                 </a>

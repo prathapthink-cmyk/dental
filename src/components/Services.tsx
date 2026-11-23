@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
+import type { MouseEvent } from 'react'
 import { services } from '../data/services'
+import { scrollToHash } from '../lib/scroll'
 import Reveal from './ui/Reveal'
 import SectionHeading from './ui/SectionHeading'
 
 export default function Services() {
   return (
-    <section id="treatments" aria-labelledby="services-heading" className="bg-cream py-16 sm:py-20 lg:py-24">
+    <section id="treatments" aria-labelledby="services-heading" className="bg-cream pt-8 pb-16 sm:pt-12 sm:pb-20 lg:py-20">
       <div className="container-page">
         <SectionHeading
           id="services-heading"
@@ -18,7 +20,11 @@ export default function Services() {
             <li key={id}>
               <Reveal delay={(i % 4) * 0.07} className="h-full">
                 <motion.a
-                  href="#contact"
+                  href="#name"
+                  onClick={(e: MouseEvent<HTMLAnchorElement>) => {
+                    e.preventDefault()
+                    scrollToHash('#name')
+                  }}
                   whileHover={{ y: -6 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   className="group flex h-full flex-col items-center rounded-2xl border border-line bg-white p-4 text-center shadow-card transition-colors duration-300 hover:border-primary/30 hover:bg-mint hover:shadow-lift sm:p-6"

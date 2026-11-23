@@ -29,7 +29,8 @@
     overflow-x: hidden;
   }
 
-  section[id] {
+  section[id],
+  #name {
     scroll-margin-top: 5rem;
   }
 
