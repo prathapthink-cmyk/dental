@@ -3,31 +3,31 @@
  * All sample values below should be replaced with the real clinic details.
  */
 export const clinic = {
-  name: 'SmileCare',
-  subtitle: 'Dental Clinic',
-  fullName: 'SmileCare Dental Clinic',
+  name: 'Nagercoil Dental',
+  subtitle: 'Clinic',
+  fullName: 'Nagercoil Dental',
   tagline: 'Healthy Smile, Happier You',
   description:
-    'SmileCare Dental Clinic offers complete family dental care - cleaning, fillings, root canals, implants, braces and teeth whitening - with modern technology and a gentle approach.',
+    'Nagercoil Dental offers complete family dental care - cleaning, fillings, root canals, implants, braces and teeth whitening - with modern technology and a gentle approach.',
   /** Production URL (used for canonical, Open Graph and structured data). */
-  siteUrl: 'https://smilecare-dental.pages.dev',
+  siteUrl: 'https://nagercoil-dental.pages.dev',
   phone: {
-    display: '+91 97890 12345',
+    display: '+91 99948 50450',
     /** Digits only with country code, used for tel: links. */
-    tel: '+919789012345',
+    tel: '+919994850450',
   },
   /** WhatsApp number: country code + number, digits only, no "+" sign. */
-  whatsappNumber: '919789012345',
-  whatsappGreeting: 'Hello SmileCare Dental Clinic, I would like to book an appointment.',
-  email: 'hello@smilecare.example',
+  whatsappNumber: '919994850450',
+  whatsappGreeting: 'Hello Nagercoil Dental, I would like to book an appointment.',
+  email: 'hello@nagercoildental.example',
   address: {
     street: '24, Green Park Road, Anna Nagar',
-    city: 'Chennai',
+    city: 'Nagercoil',
     region: 'Tamil Nadu',
-    postalCode: '600040',
+    postalCode: '629001',
     country: 'IN',
   },
-  geo: { latitude: 13.0850, longitude: 80.2101 },
+  geo: { latitude: 8.1833, longitude: 77.4119 },
   hours: [
     { days: 'Monday - Friday', time: '9:00 AM - 8:00 PM' },
     { days: 'Saturday', time: '9:00 AM - 6:00 PM' },
@@ -46,7 +46,7 @@ export const clinic = {
   },
   /** Paste the "src" URL from Google Maps > Share > Embed a map. Leave empty to show a placeholder. */
   mapEmbedUrl: '' as string,
-  mapSearchUrl: 'https://www.google.com/maps/search/?api=1&query=Anna+Nagar+Chennai',
+  mapSearchUrl: 'https://www.google.com/maps/search/?api=1&query=Nagercoil+Tamil+Nadu',
 } as const
 
 export const formattedAddress = [
