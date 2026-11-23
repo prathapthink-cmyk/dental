@@ -26,13 +26,14 @@ export const clinic = {
   whatsappGreeting: 'Hello Dental Clinic, I would like to book an appointment.',
   email: 'hello@nagercoildental.example',
   address: {
-    street: '24, Green Park Road, Anna Nagar',
+    street: '42, Court Road, Vadasery',
     city: 'Nagercoil',
     region: 'Tamil Nadu',
     postalCode: '629001',
     country: 'IN',
   },
-  geo: { latitude: 8.1833, longitude: 77.4119 },
+  /** Sample pin near Court Road / Vadasery, Nagercoil — replace with the real clinic coords. */
+  geo: { latitude: 8.1789, longitude: 77.4286 },
   hours: [
     { days: 'Monday - Friday', time: '9:00 AM - 8:00 PM' },
     { days: 'Saturday', time: '9:00 AM - 6:00 PM' },
@@ -49,9 +50,14 @@ export const clinic = {
     youtube: 'https://youtube.com/',
     x: 'https://x.com/',
   },
-  /** Paste the "src" URL from Google Maps > Share > Embed a map. Leave empty to show a placeholder. */
-  mapEmbedUrl: '' as string,
-  mapSearchUrl: 'https://www.google.com/maps/search/?api=1&query=Nagercoil+Tamil+Nadu',
+  /**
+   * Google Maps embed for Court Road, Vadasery, Nagercoil.
+   * Replace with Share > Embed a map from Google Maps when you have the exact clinic pin.
+   */
+  mapEmbedUrl:
+    'https://maps.google.com/maps?q=42+Court+Road+Vadasery+Nagercoil&hl=en&z=16&output=embed',
+  mapSearchUrl:
+    'https://www.google.com/maps/search/?api=1&query=42+Court+Road+Vadasery+Nagercoil+629001',
 } as const
 
 export const formattedAddress = [
