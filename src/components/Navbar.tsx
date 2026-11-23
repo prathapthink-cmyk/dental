@@ -124,7 +124,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href="#contact"
-            className="btn-primary px-4 py-2.5 text-xs sm:text-sm"
+            className="btn-primary shrink-0 px-3 py-2.5 text-xs sm:px-4 sm:text-sm"
             onClick={(e) => goTo(e, '#contact')}
           >
             <CalendarDays className="h-4 w-4" aria-hidden="true" />
