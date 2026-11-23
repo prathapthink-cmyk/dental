@@ -1,0 +1,72 @@
+@import '@fontsource-variable/plus-jakarta-sans';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #087b58;
+  --color-primary-dark: #075c43;
+  --color-mint: #ddf3e7;
+  --color-mint-light: #eff8f1;
+  --color-cream: #faf9f4;
+  --color-ink: #172033;
+  --color-muted: #64748b;
+  --color-line: #e8eee9;
+
+  --shadow-soft: 0 10px 30px -12px rgba(7, 92, 67, 0.18);
+  --shadow-card: 0 4px 24px -8px rgba(23, 32, 51, 0.1);
+  --shadow-lift: 0 22px 44px -16px rgba(7, 92, 67, 0.28);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold whitespace-nowrap transition-colors duration-200;
+}
+
+@utility btn-primary {
+  @apply btn bg-primary-dark text-white shadow-soft hover:bg-primary;
+}
+
+@utility btn-outline {
+  @apply btn border border-primary/40 bg-white/80 text-primary-dark hover:border-primary hover:bg-white;
+}
+
+@utility badge {
+  @apply inline-flex items-center rounded-full bg-mint px-4 py-1.5 text-xs font-semibold text-primary-dark;
+}
